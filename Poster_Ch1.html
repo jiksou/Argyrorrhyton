@@ -3,62 +3,221 @@
 <head>
   <title>FYP - Yisu Fang</title>
   <style>
-    /* Dark mode styles */
-body {
-  background-color: #222;
-  color: #eee;
-  font-family: "Palatino Nova", serif;
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-section {
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #666;
-  background-color: #333;
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: #f0f0f0;
+  background-color: #1c1c1c;
 }
 
-select {
-  background-color: #444;
-  color: #eee;
-  border: 1px solid #666;
+/* Typography */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #e6e6e6;
 }
 
-/* Top bar styles */
+p {
+  margin-bottom: 1.5rem;
+  color: #d9d9d9;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Top bar */
 .top-bar {
-  background-color: #2c3e50; /* Change the background color here */
-  padding: 10px;
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 1rem;
   position: sticky;
   top: 0;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar select {
+  background-color: #34495e;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #2d2d2d;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Cards */
+.card {
+  background-color: #383838;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons */
+button {
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #34495e;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+	  .plaque {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+.plaque-content {
+  max-width: 600px;
+  padding: 2rem;
+  background-color: #34495e;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.plaque h1,
+.plaque h3,
+.plaque h4 {
+  margin-bottom: 1rem;
+}
+
+.line {
+  height: 1px;
+  background-color: #fff;
+  margin: 1rem 0;
+}
+	  .poster-section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subsection {
+  margin-bottom: 1rem;
+}
+
+.subsection h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
   </style>
 </head>
 <body>
   <div class="top-bar">
-    <h1>Argyrorrhyton Project:</h1>
-	 <h2>Autonomous Houseplant Irrigation Robot</h2>
+    <h1><em>Argyrorrhyton:</em>
+		An Autonomous Houseplant Irrigation Robot</h1>
     <!-- Dropdown menu -->
-    <label for="section-dropdown">Go to:</label>
+    <label for="section-dropdown">Fast travel to:</label>
     <select id="section-dropdown" onchange="scrollToSection(this.value)">
-      <option value="" selected>Please Select</option>
-      <option value="#section1">Computer Vision</option>
-      <option value="#section2">Navigation</option>
-      <option value="#section3">Hardware Assembly</option>
+      <option value="#section0" selected>Credits</option>
+      <option value="#section1">CV & SLAM</option>
+      <option value="#section2">WSN</option>
+      <option value="#section3">Hardware</option>
+		<option value="#section4">RFID</option>
     </select>
   </div>
-
+<section id="section0" class="plaque">
+  <div class="plaque-content">
+    <h1>Credits</h1>
+    <h3>Xi'an-Jiaotong Liverpool University</h3>
+    <h3> School of Internet of Things</h3>
+<div class="line"></div>
+    <h4>
+      Student:<br />
+      Yisu Fang 2033451
+      <div class="line"></div>
+      Supervisors:<br />
+      Dr. Hadyan Hafizh<br />
+      Dr. Muhammad Ateeq
+      <div class="line"></div>
+      Procurement:<br />
+      Yingchao Lyu
+      <div class="line"></div>
+      Dean:<br />
+      Miguel Baptista Nunes
+    </h4>
+  </div>
+</section>
   <!-- Sections -->
   <section id="section1">
-    <h2>Computer Vision</h2>
-    <p>This is the content of Section 1.</p>
+	  <h1>Navigation Computer System (<em>Ombropompon</em>)</h1>
+    <h2>Computer Vision: YOLOv8n</h2>
+    <p>To enable real-time perception of houseplants for targeted irrigation, an on-board vision system utilizing the lightweight YOLOv8n object detection model was developed. A dataset of 914 houseplant images from <em>Aspidistra</em> and <em>Epipremnum</em> species was curated by extracting frames from videos recorded by a robotic platform in indoor environments of a local university, simulating real-life operating conditions. The dataset was further augmented to 2113 images, with 1893 for training and 190 for validation, using automated labeling on <em>roboflow.com</em> and preprocessing techniques like resizing and noise introduction. Transfer learning was employed by initializing YOLOv8n with pre-trained weights and the model is trained locally. However, overfitting was observed around the 60th iteration due to limited dataset size and diversity, highlighting the need for further optimization strategies to improve generalization capabilities.</p>
+	 <h2>SLAM and Navigation: Google Cartographer and Nav2 SMAC Planner</h2>
+    <p>Precise robot localization and mapping leveraged Google Cartographer SLAM integrated with ROS2, utilizing a planar LIDAR for forward scanning. SLAM maps were visualized in Rviz2 along with the robot's trajectory for monitoring performance. The vision system's polar houseplant coordinates were transformed to Cartesian positions on the SLAM-derived maps. These global houseplant locations served as waypoints for ROS2 Nav2's SMAC planner to compute obstacle-free navigation routes across the field, dynamically adjusting with new map data, enabling autonomous precision irrigation of detected plants.</p>
   </section>
 
-  <section id="section2">
-    <h2>Navigation</h2>
-    <p>This is the content of Section 2.</p>
-  </section>
+<section id="section2">
+  <h2>Interfacing with Peripheral Microcontrollers over Encrypted WSN</h2>
+  <p>
+    To ensure secure and reliable communication between the main computer and distributed microcontrollers, an encrypted wireless sensor network (WSN) architecture was implemented, codenamed <em>Hieroglossa</em>.
+  </p>
+
+  <div class="subsection">
+    <h3>Architecture</h3>
+    <p>
+      The <em>Hieroglossa</em> WSN comprised the central robot computer acting as the base station, along with several microcontroller nodes interfaced to sensors and actuators like pumps and motors. This decentralized topology enabled modular expansion of functionality, as well as physical isolation from single-point electrical failures.
+    </p>
+  </div>
+
+  <div class="subsection">
+    <h3>Protocol Syntax</h3>
+    <p>
+      <em>Hieroglossa</em> protocol governs the syntax for exchanging data packets over the wireless network. This protocol defined message formats, addressing schemes, and encryption standards to prevent eavesdropping or malicious interference.
+    </p>
+  </div>
+</section>
 
   <section id="section3">
     <h2>Hardware Assembly</h2>
