@@ -4,6 +4,10 @@
   <title>FYP - Yisu Fang</title>
   <style>
 /* Reset and base styles */
+	  img {
+            max-width: 100%;
+            height: auto;
+        }
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +15,7 @@
 }
 
 body {
-  font-family: 'Avenir', sans-serif;
+  font-family: 'Tahoma', sans-serif;
   line-height: 1.6;
   color: #f0f0f0;
   background-color: #1c1c1c;
@@ -195,6 +199,28 @@ button:hover {
 	  <h1>Navigation Computer System (<em>Ombropompon</em>)</h1>
     <h2>Computer Vision: YOLOv8n</h2>
     <p>To enable real-time perception of houseplants for targeted irrigation, an on-board vision system utilizing the lightweight YOLOv8n object detection model was developed. A dataset of 914 houseplant images from <em>Aspidistra</em> and <em>Epipremnum</em> species was curated by extracting frames from videos recorded by a robotic platform in indoor environments of a local university, simulating real-life operating conditions. The dataset was further augmented to 2113 images, with 1893 for training and 190 for validation, using automated labeling on <em>roboflow.com</em> and preprocessing techniques like resizing and noise introduction. Transfer learning was employed by initializing YOLOv8n with pre-trained weights and the model is trained locally. However, overfitting was observed around the 60th iteration due to limited dataset size and diversity, highlighting the need for further optimization strategies to improve generalization capabilities.</p>
+<figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo.png" alt="1">
+    <figcaption>Auto-labelling with Roboflow.com</figcaption>
+</figure>
+<br>
+
+<figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo2.png" alt="1">
+    <figcaption>Manual adding label instances</figcaption>
+</figure>
+<br>
+
+<figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo3.png" alt="1">
+    <figcaption>Data augmentation and exporting with Roboflow.com</figcaption>
+</figure>
+<br>
+
+<figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo4.png" alt="1">
+    <figcaption>Training is done locally, monitored with Tensorboard</figcaption>
+</figure>
 	 <h2>SLAM and Navigation: Google Cartographer and Nav2 SMAC Planner</h2>
     <p>Precise robot localization and mapping leveraged Google Cartographer SLAM integrated with ROS2, utilizing a planar LIDAR for forward scanning. SLAM maps were visualized in Rviz2 along with the robot's trajectory for monitoring performance. The vision system's polar houseplant coordinates were transformed to Cartesian positions on the SLAM-derived maps. These global houseplant locations served as waypoints for ROS2 Nav2's SMAC planner to compute obstacle-free navigation routes across the field, dynamically adjusting with new map data, enabling autonomous precision irrigation of detected plants.</p>
   </section>
