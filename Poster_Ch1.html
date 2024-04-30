@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FYP - Yisu Fang</title>
+  <title>Yisu Fang's FYP Poster External Page</title>
   <style>
 /* Reset and base styles */
-	  img {
-            max-width: 100%;
-            height: auto;
-        }
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,22 +11,22 @@
 }
 
 body {
-  font-family: 'Tahoma', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif';
   line-height: 1.6;
-  color: #f0f0f0;
-  background-color: #1c1c1c;
+  color: #333;
+  background-color: #f0f0f0;
 }
 
 /* Typography */
 h1, h2, h3, h4 {
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #e6e6e6;
+  color: #2c3e50;
 }
 
 p {
   margin-bottom: 1.5rem;
-  color: #d9d9d9;
+  color: #555;
 }
 
 /* Layout */
@@ -42,7 +38,7 @@ p {
 
 /* Top bar */
 .top-bar {
-  background-color: #2c3e50;
+  background-color: #34495e;
   color: #fff;
   padding: 1rem;
   position: sticky;
@@ -53,8 +49,13 @@ p {
   align-items: center;
 }
 
+.top-bar h2 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
 .top-bar select {
-  background-color: #34495e;
+  background-color: #2c3e50;
   color: #fff;
   border: none;
   padding: 0.5rem;
@@ -67,17 +68,17 @@ section {
   margin-bottom: 2rem;
   padding: 2rem;
   border-radius: 5px;
-  background-color: #2d2d2d;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Cards */
 .card {
-  background-color: #383838;
+  background-color: #f9f9f9;
   border-radius: 5px;
   padding: 1rem;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Buttons */
@@ -109,28 +110,32 @@ button:hover {
 .fade-in {
   animation: fadeIn 0.5s ease-in-out;
 }
-	  .plaque {
+
+/* Plaque */
+.plaque {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #2c3e50;
+  background-color: #34495e;
   color: #fff;
   text-align: center;
   padding: 2rem;
 }
 
 .plaque-content {
-  max-width: 600px;
+  max-width: 800px;
   padding: 2rem;
-  background-color: #34495e;
+  background-color: #2c3e50;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .plaque h1,
+.plaque h2,
 .plaque h3,
 .plaque h4 {
+  color: #fff;
   margin-bottom: 1rem;
 }
 
@@ -139,7 +144,9 @@ button:hover {
   background-color: #fff;
   margin: 1rem 0;
 }
-	  .poster-section {
+
+/* Poster Section */
+.poster-section {
   margin-bottom: 2rem;
   padding: 2rem;
   border-radius: 5px;
@@ -155,12 +162,45 @@ button:hover {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
   </style>
 </head>
 <body>
   <div class="top-bar">
-    <h1><em>Argyrorrhyton:</em>
-		An Autonomous Houseplant Irrigation Robot</h1>
+    <h2><em>Argyrorrhyton:</em>
+		An Autonomous Houseplant Irrigation Robot</h2>
     <!-- Dropdown menu -->
     <label for="section-dropdown">Fast travel to:</label>
     <select id="section-dropdown" onchange="scrollToSection(this.value)">
@@ -175,12 +215,11 @@ button:hover {
 <section id="section0" class="plaque">
   <div class="plaque-content">
     <h1>Credits</h1>
-    <h3>Xi'an-Jiaotong Liverpool University</h3>
-    <h3> School of Internet of Things</h3>
+    <h2>Xi'an-Jiaotong Liverpool University <br> School of Internet of Things</h2>
 <div class="line"></div>
     <h4>
       Student:<br />
-      Yisu Fang 2033451
+      Yisu Fang <br>2033451
       <div class="line"></div>
       Supervisors:<br />
       Dr. Hadyan Hafizh<br />
@@ -200,29 +239,34 @@ button:hover {
     <h2>Computer Vision: YOLOv8n</h2>
     <p>To enable real-time perception of houseplants for targeted irrigation, an on-board vision system utilizing the lightweight YOLOv8n object detection model was developed. A dataset of 914 houseplant images from <em>Aspidistra</em> and <em>Epipremnum</em> species was curated by extracting frames from videos recorded by a robotic platform in indoor environments of a local university, simulating real-life operating conditions. The dataset was further augmented to 2113 images, with 1893 for training and 190 for validation, using automated labeling on <em>roboflow.com</em> and preprocessing techniques like resizing and noise introduction. Transfer learning was employed by initializing YOLOv8n with pre-trained weights and the model is trained locally. However, overfitting was observed around the 60th iteration due to limited dataset size and diversity, highlighting the need for further optimization strategies to improve generalization capabilities.</p>
 <figure>
-    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo.png" alt="1">
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo1.png" alt="img">
     <figcaption>Auto-labelling with Roboflow.com</figcaption>
 </figure>
 <br>
 
 <figure>
-    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo2.png" alt="1">
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo2.png" alt="img">
     <figcaption>Manual adding label instances</figcaption>
 </figure>
 <br>
 
 <figure>
-    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo3.png" alt="1">
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo3.png" alt="img">
     <figcaption>Data augmentation and exporting with Roboflow.com</figcaption>
 </figure>
 <br>
 
 <figure>
-    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo4.png" alt="1">
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo4.png" alt="img">
     <figcaption>Training is done locally, monitored with Tensorboard</figcaption>
-</figure>
+</figure><br>
+
 	 <h2>SLAM and Navigation: Google Cartographer and Nav2 SMAC Planner</h2>
     <p>Precise robot localization and mapping leveraged Google Cartographer SLAM integrated with ROS2, utilizing a planar LIDAR for forward scanning. SLAM maps were visualized in Rviz2 along with the robot's trajectory for monitoring performance. The vision system's polar houseplant coordinates were transformed to Cartesian positions on the SLAM-derived maps. These global houseplant locations served as waypoints for ROS2 Nav2's SMAC planner to compute obstacle-free navigation routes across the field, dynamically adjusting with new map data, enabling autonomous precision irrigation of detected plants.</p>
+	  <figure>
+    <br><img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/slam1.png" alt="img">
+    <figcaption>LIDAR visualization in Rviz2</figcaption>
+</figure>
   </section>
 
 <section id="section2">
@@ -320,15 +364,7 @@ button:hover {
       <li>γλῶσσα (glōssa) = tongue, language</li>
     </ul>
     <p>So the literal translation of <em>hieroglossa</em> is "sacred tongue" or "holy language".</p>
-    <p>In ancient Greece, the term was used to refer to the languages used in religious rituals, ceremonies, and sacred texts. Specifically:</p>
-    <ul>
-      <li>It could refer to ancient languages like Sanskrit that were considered divine/priestly languages.</li>
-      <li>It described the Greek language itself when used for religious purposes in prayers, hymns, oracles etc.</li>
-      <li>Some ancient writers used it to refer to the obscure, symbolic language found in hieroglyphics.</li>
-    </ul>
-    <p>The word <em>hieroglossa</em> captures the idea that certain languages were considered hallowed and reserved for spiritual/religious contexts. Using the "sacred tongue" lent solemnity and divine significance.</p>
-    <p>So in ancient times, a <em>hieroglossa</em> was a language elevated above common speech and imbued with sacred properties when used for holy rituals, texts, and communications with the divine according to ancient beliefs.</p>
-    <p>It provides insight into how languages developed special, rarefied forms considered suitable for interfacing with the realm of the sacred and supernatural according to ancient beliefs.</p>
+    <p>In ancient Greece, the term was used to refer to the languages used in religious rituals, ceremonies, and sacred texts. </p>
   </section>
 
   <section>
@@ -375,6 +411,33 @@ button:hover {
         }
       }
     }
+  </script>
+	  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <p>Welcome! <br>This webpage contains numerous images, best served with a WiFi connection to avoid potential data charges. <br>The owner assumes no liability for any data rates incurred while accessing it.</p>
+		<p>歡迎！<br>本網頁包含大量圖像，建議使用無線網絡連接以避免可能產生的流量資費。<br>網站所有者不會報銷瀏覽時產生的任何流量資費。</p>
+    </div>
+  </div>
+
+  <script>
+ window.onload = function() {
+  var popup = document.getElementById("popup");
+  var closeBtn = document.getElementsByClassName("close-btn")[0];
+
+  // Show the popup when the page loads
+  popup.style.display = "block";
+
+  // Hide the popup after 1 second
+  setTimeout(function() {
+    popup.style.display = "none";
+  }, 10000);
+
+  // Add event listener to the close button
+  closeBtn.addEventListener("click", function() {
+    popup.style.display = "none";
+  });
+}
   </script>
 </body>
 </html>
