@@ -18,7 +18,10 @@ body {
   color: #333;
   background-color: #f0f0f0;
 }
-
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
 /* Typography */
 h1, h2, h3, h4 {
   font-weight: 600;
@@ -185,7 +188,21 @@ button:hover {
   background-color: #fff;
   margin: 1rem 0;
 }
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
+.button:hover {
+  background-color: #45a049;
+}
 /* Poster Section */
 .poster-section {
   margin-bottom: 2rem;
@@ -244,18 +261,18 @@ button:hover {
     <li><a href="#section0">Credits</a></li>
     <li><a href="#etym">Etymology</a></li>
     <li><a href="#intro">Introduction</a></li>
-    <li><a href="#section1">CV & SLAM</a></li>
+    <li><a href="#section1">CV</a></li>
+	  <li><a href="#SLAM">SLAM</a></li>
     <li><a href="#section2">WSN</a></li>
+	      <li><a href="#section4">RFID</a></li>
     <li><a href="#section3">Assembly</a></li>
-    <li><a href="#section4">RFID</a></li>
   </ul>
 </nav>
   <div class="top-bar">
     <h2><em>Argyrorrhyton:</em>
 		Autonomous Houseplant Irrigation Robot</h2>
 	    <nav>
-    <a href="zht.html">中文</a>
-	<a href="fra.html">français</a>
+    <a href="buy.html" class="button">Buy now</a>
   </nav>
   </div>
 <section id="section0" class="plaque">
@@ -279,6 +296,10 @@ button:hover {
   </div>
 </section>
 		  <div id="container">
+			  <section><img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/aegisona.jpg" alt="img" class="responsive-image">
+				  <p>This project shares internet connectivity with other Aegisona instances. 
+				  </p>
+			  </section>
 	<section id="etym">
   <h2>Etymology</h2>
 <section>
@@ -292,17 +313,86 @@ button:hover {
 
 	<p><a href="https://lsj.gr/wiki/%E1%BC%80%CF%81%CE%B3%CF%85%CF%81%CF%8C%CF%81%CF%81%CF%85%CF%84%CE%BF%CF%82">H. G. Liddell, R. Scott, and H. S. Jones, "ἀργυρόρρυτος," A Greek-English Lexicon.</a></p>
 </section>
+<section id="poem">
+  <h2>The Lay</h2>
+	<h1>A poem written in iambic pentameter using Generative AI, in the style of <em>The Lays of Ancient Rome.</em></h1>
+  <p>In bygone times, upon the frozen plain,<br>
+  Where Rodanos' waters fierce and wild did reign,<br>
+  There flourished a flower, rare and fair,<br>
+  The Necroanthemum beyond compare.</p>
 
+  <p>This delicate bloom of celestial grace,<br>
+  Did lure bold souls to seek its resting place.<br>
+  Yet treacherous cliffs exacted a toll,<br>
+  As seekers lost their lives, body and soul.</p>
+
+  <p>Undaunted by the cliffs' menacing frown,<br>
+  They pressed ahead, despite the danger shown.<br>
+  Like moths to flame, they sought the flower's light,<br>
+  Driven by longing, by passion's might.</p>
+
+  <p>In the golden age of Amphion's reign,<br>
+  The wanderer plucked the bloom without disdain.<br>
+  With tender care, he brought it to his home,<br>
+  In his lush garden, it began to roam.</p>
+
+  <p>Within those verdant halls, it did enchant,<br>
+  With fragrant whispers, tales of love and want.<br>
+  Epic stories and romances it wove,<br>
+  From its petals, secrets of old it strove.</p>
+
+  <p>To those who charmed its spirit, it revealed,<br>
+  Nature's wonders, its truths unconcealed.<br>
+  Amphion vowed to protect its tender bloom,<br>
+  From fate's cruel hand, from impending doom.</p>
+
+  <p>To mystic Clusium the wanderer went,<br>
+  Seeking counsel from the oracles, intent.<br>
+  Through valleys perilous, their whispers led,<br>
+  Of destiny's call, with a thread so dread.</p>
+
+  <p>The oracles spoke of a prophecy dire,<br>
+  Of nature's imbalance, of flames afire.<br>
+  To safeguard the bloom from chaos' cruel reign,<br>
+  A sentinel must arise, to ease the pain.</p>
+
+  <p>With magic's craft and artistry so true,<br>
+  Amphion forged a guardian to construe.<br>
+  Argyrorrhyton, by arcane might,<br>
+  Would tend the flower, through day and night.</p>
+
+  <p>Born from magic's spark, it stood with grace,<br>
+  A guardian, in that sacred place.<br>
+  With searing judgment, it repelled all ill,<br>
+  Ensuring the flower's beauty would fulfill.</p>
+
+  <p>Through emerald corridors, it did glide,<br>
+  Bringing succor to all, far and wide.<br>
+  More than machine, it lived as oath divine,<br>
+  Whispered by oracles, in ancient shrine.</p>
+
+  <p>Each step it took, guided by destiny's thread,<br>
+  A call to elevate, where nature led.<br>
+  Shall we surrender to its beguiling song?<br>
+  To chase the mystery, where we belong?</p>
+
+  <p>For those whose hearts beat with innovation's call,<br>
+  Let Argyrorrhyton's summons enthrall.</p>
+</section>
 <section id="intro">
-	 <h2>Introduction</h2>
-    <h1>content</h1>
-	<p>contenu manque</p>
-	</section>
+  <h2>Introduction</h2>
+    <h1>Technology</h1>
+<p>The convergence of Light Detection and Ranging (LIDAR), Simultaneous Localization and Mapping (SLAM), Robot Operating System 2 (ROS2), and lightweight machine vision like YOLOv8 is enabling a new era of cost-effective, intelligent robotic solutions. This project presents <em>"Argyrorrhyton"</em> - an autonomous robot that integrates these cutting-edge technologies to navigate indoor office environments and autonomously locate and water houseplants.</p>
+<p>Harnessing LIDAR for precision mapping and SLAM algorithms for localization, Ombrotron constructs 2D environmental maps to autonomously navigate corridors and rooms. The open-source ROS2 framework provides a modular software architecture, integrating sensor data, control algorithms, and IoT connectivity. Onboard YOLOv8 enables efficient vision-based detection of houseplants amidst cluttered scenes on embedded hardware. In addition, an encrypted wireless data interchange network is established between the server computer and the microcontrollers to provide electrical isolation between locomotion and control systems.</p>  
+<p>By combining these technologies, <em>Argyrorrhyton</em> demonstrates an affordable yet sophisticated solution for the emerging field of intelligent robotic horticulture maintenance. The system optimizes efficiency while minimizing costs compared to expensive alternatives. This interdisciplinary work advances state-of-the-art applications in autonomous robotics, machine perception, and intelligent agriculture within real-world office environments.</p>
+	<h1>Methodology</h1>
+</section>
 
   <!-- Sections -->
   <section id="section1">
-	  <h2>Navigation System - <em>Ombropompon</em></h2>
-    <h1>Computer Vision: YOLOv8n</h1>
+	  <h2>Vision System: <br><em>Phytomanteion</em></h2>
+    <h1>Implementing Computer Vision with MobileNetV2 SSD</h1>
+	  <h1>Implementing Computer Vision with YOLOv8n</h1>
     <p>To enable real-time perception of houseplants for targeted irrigation, an on-board vision system utilizing the lightweight YOLOv8n object detection model was developed. A dataset of 914 houseplant images from <em>Aspidistra</em> and <em>Epipremnum</em> species was curated by extracting frames from videos recorded by a robotic platform in indoor environments of a local university, simulating real-life operating conditions. The dataset was further augmented to 2113 images, with 1893 for training and 190 for validation, using automated labeling on <em>roboflow.com</em> and preprocessing techniques like resizing and noise introduction. Transfer learning was employed by initializing YOLOv8n with pre-trained weights and the model is trained locally. However, overfitting was observed around the 60th iteration due to limited dataset size and diversity, highlighting the need for further optimization strategies to improve generalization capabilities.</p>
 <figure>
     <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo1.png" alt="img">
@@ -325,9 +415,10 @@ button:hover {
 <figure>
     <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo4.png" alt="img">
     <figcaption>Training is done locally, monitored with Tensorboard</figcaption>
-</figure><br>
-
-	 <h1>SLAM and Navigation: Google Cartographer and Nav2 SMAC Planner</h1>
+</figure><br></section>
+	  <section id="SLAM">
+<h2>Navigation System: <br><em>Ombropompon</em></h2>
+	 <h1>Implementing SLAM and Pathfinding with Google Cartographer SLAM and Nav2 SMAC (A* Algorithm)</h1>
     <p>Precise robot localization and mapping leveraged Google Cartographer SLAM integrated with ROS2, utilizing a planar LIDAR for forward scanning. SLAM maps were visualized in Rviz2 along with the robot's trajectory for monitoring performance. The vision system's polar houseplant coordinates were transformed to Cartesian positions on the SLAM-derived maps. These global houseplant locations served as waypoints for ROS2 Nav2's SMAC planner to compute obstacle-free navigation routes across the field, dynamically adjusting with new map data, enabling autonomous precision irrigation of detected plants.</p>
 	  <figure>
     <br><img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/slam1.png" alt="img">
@@ -336,7 +427,7 @@ button:hover {
   </section>
 
 <section id="section2">
-  <h2>Encrypted Ad-hoc WSN Interface - <em>Hieroglossa</em></h2>
+  <h2>Encrypted Ad-hoc WSN Data Interchange System: <br><em>Hieroglossa</em></h2>
   <p>
     To ensure secure and reliable communication between the main computer and distributed microcontrollers, an encrypted wireless sensor network (WSN) architecture was implemented, codenamed <em>Hieroglossa</em>.
   </p>
@@ -355,16 +446,16 @@ button:hover {
     </p>
   </div>
 </section>
-
-  <section id="section3">
+<section id="section4">
+    <h2>RFID Asset Management Database: <br><em>Phytognomon</em></h2>
+    <p>This is the content of Section 3.</p>
+</section>
+<section id="section3">
     <h2>Hardware Assembly</h2>
     <p>This is the content of Section 3.</p>
   </section>
-  <section id="section4">
-    <h2>RFID Logging</h2>
-    <p>This is the content of Section 3.</p>
-  </section>
-  <script>
+  
+<script>
     function scrollToSection(sectionId) {
       if (sectionId) {
         const section = document.querySelector(sectionId);
@@ -377,7 +468,7 @@ button:hover {
 	  <div id="popup" class="popup">
     <div class="popup-content">
       <span class="close-btn">&times;</span>
-      <h2>Welcome!</h2> <p>This webpage is dependent on Github and Google Fonts. <br>Some contents may fail to load properly from your location.</p>
+      <h2>Welcome, traveller!</h2> <p>This webpage is dependent on Github and Google Fonts. <br>Some contents may fail to load properly from your location.</p>
     </div>
   </div>
   <script>
