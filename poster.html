@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yisu Fang's FYP Poster External Page</title>
+	<link href="https://fonts.googleapis.com/css?family=Reddit+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Marcellus" rel="stylesheet">
+  <style>
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Reddit Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f0f0f0;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+#container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Top bar */
+.top-bar {
+  background-color: #34495e;
+  color: #fff;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar h2 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.top-bar select {
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+	  @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+h2 {
+  font-size: 32px;
+  font-family: 'Marcellus', sans-serif;
+}
+
+/* Cards */
+.card {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #34495e;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+.content-menu {
+  position: fixed;
+  left: 20px;
+  top: 100px;
+  width: 200px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.content-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.content-menu li {
+  margin-bottom: 10px;
+}
+
+.content-menu a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.content-menu a:hover {
+  background-color: #ddd;
+}
+/* Plaque */
+.plaque {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #34495e;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+.plaque-content {
+  max-width: 800px;
+  padding: 2rem;
+  background-color: #2c3e50;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.plaque h1,
+.plaque h2,
+.plaque h3,
+.plaque h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.line {
+  height: 1px;
+  background-color: #fff;
+  margin: 1rem 0;
+}
+
+/* Poster Section */
+.poster-section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subsection {
+  margin-bottom: 1rem;
+}
+
+.subsection h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+	<nav class="content-menu">
+  <ul>
+    <li><a href="#section0">Credits</a></li>
+    <li><a href="#etym">Etymology</a></li>
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#section1">Navigation Computer System</a></li>
+    <li><a href="#section2">Encrypted Ad-hoc WSN Interface</a></li>
+    <li><a href="#section3">Hardware Assembly</a></li>
+    <li><a href="#section4">RFID Logging</a></li>
+  </ul>
+</nav>
+  <div class="top-bar">
+    <h2><em>Argyrorrhyton:</em>
+		An Autonomous Houseplant Irrigation Robot</h2>
+	    <nav>
+    <a href="zht.html">中文</a>
+	<a href="fra.html">français</a>
+  </nav>
+  </div>
+<section id="section0" class="plaque">
+  <div class="plaque-content">
+    <h2>Xi'an-Jiaotong Liverpool University <br> School of Internet of Things</h2>
+<div class="line"></div>
+    <h4>
+      Student:<br />
+      Yisu Fang <br>2033451
+      <div class="line"></div>
+      Supervisors:<br />
+      Dr. Hadyan Hafizh<br />
+      Dr. Muhammad Ateeq
+      <div class="line"></div>
+      Procurement:<br />
+      Yingchao Lyu
+      <div class="line"></div>
+      Dean:<br />
+      Miguel Baptista Nunes
+    </h4>
+  </div>
+</section>
+		  <div id="container">
+	<section id="etym">
+  <h2>Etymology</h2>
+<section>
+    <p>The ancient Greek word "<em>argyrorrhyton</em>" (ἀργυρόρρυτον) is a compound word derived from two components:</p>
+    <p>The first part of the word, "<em>argyros</em>," is an adjective meaning "silvery" or "made of silver." It is derived from the Greek word "<em>argyros</em>" (ἄργυρος), meaning "silver."</p>
+    <p>The second part, "<em>rhyton</em>," is a noun referring to a specific type of ancient Greek drinking vessel. A <em>rhyton</em> was a distinctive container made from ceramic, metal, or even horn, with one end shaped like an animal's head or a similar design, and the other end being the opening from which the liquid was consumed.</p>
+    <p>Therefore, the word "<em>argyrorrhyton</em>" (ἀργυρόρρυτον) literally means "a silver <em>rhyton</em>" or "a <em>rhyton</em> made of silver." It refers to a particular type of ancient Greek drinking vessel, specifically a <em>rhyton</em> crafted from silver.</p>
+    <p>The word can also be analyzed as a compound adjective of "<em>argyros</em>" (silver) and "<em>rhytos</em>" (flowing or pouring), declined in the neuter gender.</p>
+	<img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/1714729544080.png" alt="img">
+ <p>The source material given is a citation from <em>The Liddell, Scott, Jones Ancient Greek Lexicon </em>(LSJ).</p><p>The word <em>argyrorrhytos, -on </em> is attested in Euripides' play "Helen" line 386, describing a location "beside a silver stream" specifically referencing the banks of the river Hebrus.</p>
+
+	<p><a href="https://lsj.gr/wiki/%E1%BC%80%CF%81%CE%B3%CF%85%CF%81%CF%8C%CF%81%CF%81%CF%85%CF%84%CE%BF%CF%82">H. G. Liddell, R. Scott, and H. S. Jones, "ἀργυρόρρυτος," A Greek-English Lexicon.</a></p>
+</section>
+
+<section id="intro">
+	 <h2>Introduction</h2>
+    <h1>content</h1>
+	<p>contenu manque</p>
+	</section>
+
+  <!-- Sections -->
+  <section id="section1">
+	  <h2>Navigation Computer System - <em>Ombropompon</em></h2>
+    <h1>Computer Vision: YOLOv8n</h1>
+    <p>To enable real-time perception of houseplants for targeted irrigation, an on-board vision system utilizing the lightweight YOLOv8n object detection model was developed. A dataset of 914 houseplant images from <em>Aspidistra</em> and <em>Epipremnum</em> species was curated by extracting frames from videos recorded by a robotic platform in indoor environments of a local university, simulating real-life operating conditions. The dataset was further augmented to 2113 images, with 1893 for training and 190 for validation, using automated labeling on <em>roboflow.com</em> and preprocessing techniques like resizing and noise introduction. Transfer learning was employed by initializing YOLOv8n with pre-trained weights and the model is trained locally. However, overfitting was observed around the 60th iteration due to limited dataset size and diversity, highlighting the need for further optimization strategies to improve generalization capabilities.</p>
+<figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo1.png" alt="img">
+    <figcaption>Auto-labelling with Roboflow.com</figcaption>
+</figure>
+<br>
+
+<figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo2.png" alt="img">
+    <figcaption>Manual adding label instances</figcaption>
+</figure>
+<br>
+
+<figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo3.png" alt="img">
+    <figcaption>Data augmentation and exporting with Roboflow.com</figcaption>
+</figure>
+<br>
+
+<figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo4.png" alt="img">
+    <figcaption>Training is done locally, monitored with Tensorboard</figcaption>
+</figure><br>
+
+	 <h1>SLAM and Navigation: Google Cartographer and Nav2 SMAC Planner</h1>
+    <p>Precise robot localization and mapping leveraged Google Cartographer SLAM integrated with ROS2, utilizing a planar LIDAR for forward scanning. SLAM maps were visualized in Rviz2 along with the robot's trajectory for monitoring performance. The vision system's polar houseplant coordinates were transformed to Cartesian positions on the SLAM-derived maps. These global houseplant locations served as waypoints for ROS2 Nav2's SMAC planner to compute obstacle-free navigation routes across the field, dynamically adjusting with new map data, enabling autonomous precision irrigation of detected plants.</p>
+	  <figure>
+    <br><img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/slam1.png" alt="img">
+    <figcaption>LIDAR visualization in Rviz2</figcaption>
+</figure>
+  </section>
+
+<section id="section2">
+  <h2>Encrypted Ad-hoc WSN Interface - <em>Hieroglossa</em></h2>
+  <p>
+    To ensure secure and reliable communication between the main computer and distributed microcontrollers, an encrypted wireless sensor network (WSN) architecture was implemented, codenamed <em>Hieroglossa</em>.
+  </p>
+
+  <div class="subsection">
+    <h3>Architecture</h3>
+    <p>
+      The <em>Hieroglossa</em> WSN comprised the central robot computer acting as the base station, along with several microcontroller nodes interfaced to sensors and actuators like pumps and motors. This decentralized topology enabled modular expansion of functionality, as well as physical isolation from single-point electrical failures.
+    </p>
+  </div>
+
+  <div class="subsection">
+    <h3>Protocol Syntax</h3>
+    <p>
+      <em>Hieroglossa</em> protocol governs the syntax for exchanging data packets over the wireless network. This protocol defined message formats, addressing schemes, and encryption standards to prevent eavesdropping or malicious interference.
+    </p>
+  </div>
+</section>
+
+  <section id="section3">
+    <h2>Hardware Assembly</h2>
+    <p>This is the content of Section 3.</p>
+  </section>
+  <section id="section4">
+    <h2>RFID Logging</h2>
+    <p>This is the content of Section 3.</p>
+  </section>
+  <script>
+    function scrollToSection(sectionId) {
+      if (sectionId) {
+        const section = document.querySelector(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+  </script>
+	  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <h2>Welcome!</h2> <p>This webpage is dependent on Github and Google Fonts. <br>Some contents may fail to load properly from your location.</p>
+    </div>
+  </div>
+
+  <script>
+ window.onload = function() {
+  var popup = document.getElementById("popup");
+  var closeBtn = document.getElementsByClassName("close-btn")[0];
+
+  // Show the popup when the page loads
+  popup.style.display = "block";
+
+  // Hide the popup after 1 second
+  setTimeout(function() {
+    popup.style.display = "none";
+  }, 10000);
+
+  // Add event listener to the close button
+  closeBtn.addEventListener("click", function() {
+    popup.style.display = "none";
+  });
+}
+  </script>
+</body>
+</html>
