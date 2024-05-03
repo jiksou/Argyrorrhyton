@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Yisu Fang's FYP Poster External Page</title>
+  <title>Yisu Fang's FYP Poster Page</title>
 	<link href="https://fonts.googleapis.com/css?family=Reddit+Sans" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Marcellus" rel="stylesheet">
   <style>
@@ -217,10 +217,10 @@ button:hover {
 
 .popup-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 30%;
+  width: 50%;
 }
 
 .close-btn {
@@ -244,15 +244,15 @@ button:hover {
     <li><a href="#section0">Credits</a></li>
     <li><a href="#etym">Etymology</a></li>
     <li><a href="#intro">Introduction</a></li>
-    <li><a href="#section1">Navigation Computer System</a></li>
-    <li><a href="#section2">Encrypted Ad-hoc WSN Interface</a></li>
-    <li><a href="#section3">Hardware Assembly</a></li>
-    <li><a href="#section4">RFID Logging</a></li>
+    <li><a href="#section1">CV & SLAM</a></li>
+    <li><a href="#section2">WSN</a></li>
+    <li><a href="#section3">Assembly</a></li>
+    <li><a href="#section4">RFID</a></li>
   </ul>
 </nav>
   <div class="top-bar">
     <h2><em>Argyrorrhyton:</em>
-		An Autonomous Houseplant Irrigation Robot</h2>
+		Autonomous Houseplant Irrigation Robot</h2>
 	    <nav>
     <a href="zht.html">中文</a>
 	<a href="fra.html">français</a>
@@ -301,7 +301,7 @@ button:hover {
 
   <!-- Sections -->
   <section id="section1">
-	  <h2>Navigation Computer System - <em>Ombropompon</em></h2>
+	  <h2>Navigation System - <em>Ombropompon</em></h2>
     <h1>Computer Vision: YOLOv8n</h1>
     <p>To enable real-time perception of houseplants for targeted irrigation, an on-board vision system utilizing the lightweight YOLOv8n object detection model was developed. A dataset of 914 houseplant images from <em>Aspidistra</em> and <em>Epipremnum</em> species was curated by extracting frames from videos recorded by a robotic platform in indoor environments of a local university, simulating real-life operating conditions. The dataset was further augmented to 2113 images, with 1893 for training and 190 for validation, using automated labeling on <em>roboflow.com</em> and preprocessing techniques like resizing and noise introduction. Transfer learning was employed by initializing YOLOv8n with pre-trained weights and the model is trained locally. However, overfitting was observed around the 60th iteration due to limited dataset size and diversity, highlighting the need for further optimization strategies to improve generalization capabilities.</p>
 <figure>
@@ -380,7 +380,6 @@ button:hover {
       <h2>Welcome!</h2> <p>This webpage is dependent on Github and Google Fonts. <br>Some contents may fail to load properly from your location.</p>
     </div>
   </div>
-
   <script>
  window.onload = function() {
   var popup = document.getElementById("popup");
