@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yisu Fang's FYP Poster Page</title>
+	<link href="https://fonts.googleapis.com/css?family=Reddit+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Marcellus" rel="stylesheet">
+  <style>
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Reddit Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f0f0f0;
+}
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+/* Typography */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+#container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Top bar */
+.top-bar {
+  background-color: #34495e;
+  color: #fff;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar h2 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.top-bar select {
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+	  @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+h2 {
+  font-size: 32px;
+  font-family: 'Marcellus', sans-serif;
+}
+
+/* Cards */
+.card {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #34495e;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+.content-menu {
+  position: fixed;
+  left: 20px;
+  top: 200px;
+  width: 200px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.content-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.content-menu li {
+  margin-bottom: 10px;
+}
+
+.content-menu a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.content-menu a:hover {
+  background-color: #ddd;
+}
+/* Plaque */
+.plaque {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #34495e;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+.plaque-content {
+  max-width: 800px;
+  padding: 2rem;
+  background-color: #2c3e50;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.plaque h1,
+.plaque h2,
+.plaque h3,
+.plaque h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.line {
+  height: 1px;
+  background-color: #fff;
+  margin: 1rem 0;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+/* Poster Section */
+.poster-section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subsection {
+  margin-bottom: 1rem;
+}
+
+.subsection h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+  </style>
+</head>
+<body><!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yisu Fang's FYP Poster Page</title>
+	<link href="https://fonts.googleapis.com/css?family=Reddit+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Marcellus" rel="stylesheet">
+  <style>
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Reddit Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f0f0f0;
+}
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+/* Typography */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+#container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Top bar */
+.top-bar {
+  background-color: #34495e;
+  color: #fff;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar h2 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.top-bar select {
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+	  @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+h2 {
+  font-size: 32px;
+  font-family: 'Marcellus', sans-serif;
+}
+
+/* Cards */
+.card {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #34495e;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+.content-menu {
+  position: fixed;
+  left: 20px;
+  top: 200px;
+  width: 200px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.content-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.content-menu li {
+  margin-bottom: 10px;
+}
+
+.content-menu a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.content-menu a:hover {
+  background-color: #ddd;
+}
+/* Plaque */
+.plaque {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #34495e;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+.plaque-content {
+  max-width: 800px;
+  padding: 2rem;
+  background-color: #2c3e50;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.plaque h1,
+.plaque h2,
+.plaque h3,
+.plaque h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.line {
+  height: 1px;
+  background-color: #fff;
+  margin: 1rem 0;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+/* Poster Section */
+.poster-section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subsection {
+  margin-bottom: 1rem;
+}
+
+.subsection h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+	  <div class="top-bar">
+    <h2><em>Argyrorrhyton:</em>
+		Autonomous Houseplant Irrigation Robot</h2>
+	    <nav>
+    <a href="poster.html" class="button">the Science Button</a>
+  </nav>
+  </div>
+	 <div id="container">
+			  <section id="aest">  <h2>Engineering</h2>
+				  <h1>Internet of Things, Robotics, Artificial Intelligence &c.</h1>
+				 <!-- <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/aegisona.jpg" alt="img" class="responsive-image">-->
+				  <p>The current page is the aesthetics documentation page.</p>
+				  <a href="poster.html" class="button">the Science Button</a>
+				  <p><br>This project is designed with engineering in mind. <br>Please click the science button to see the engineering documentation page. 
+				  </p>
+			  </section>
+		 <section id="etym">
+  <h2>Etymology</h2>
+<section>
+    <p>The ancient Greek word "<em>argyrorrhyton</em>" (ἀργυρόρρυτον) is a compound word derived from two components:</p>
+    <p>The first part of the word, "<em>argyros</em>," is an adjective meaning "silvery" or "made of silver." It is derived from the Greek word "<em>argyros</em>" (ἄργυρος), meaning "silver."</p>
+    <p>The second part, "<em>rhyton</em>," is a noun referring to a specific type of ancient Greek drinking vessel. A <em>rhyton</em> was a distinctive container made from ceramic, metal, or even horn, with one end shaped like an animal's head or a similar design, and the other end being the opening from which the liquid was consumed.</p>
+    <p>Therefore, the word "<em>argyrorrhyton</em>" (ἀργυρόρρυτον) literally means "a silver <em>rhyton</em>" or "a <em>rhyton</em> made of silver." It refers to a particular type of ancient Greek drinking vessel, specifically a <em>rhyton</em> crafted from silver.</p>
+    <p>The word can also be analyzed as a compound adjective of "<em>argyros</em>" (silver) and "<em>rhytos</em>" (flowing or pouring), declined in the neuter gender.</p>
+	<img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/1714729544080.png" alt="img">
+ <p>The source material given is a citation from <em>The Liddell, Scott, Jones Ancient Greek Lexicon </em>(LSJ).</p><p>The word <em>argyrorrhytos, -on </em> is attested in Euripides' play "Helen" line 386, describing a location "beside a silver stream" specifically referencing the banks of the river Hebrus.</p>
+
+	<p><a href="https://lsj.gr/wiki/%E1%BC%80%CF%81%CE%B3%CF%85%CF%81%CF%8C%CF%81%CF%81%CF%85%CF%84%CE%BF%CF%82">H. G. Liddell, R. Scott, and H. S. Jones, "ἀργυρόρρυτος," A Greek-English Lexicon.</a></p>
+</section>
+<section id="poem">
+  <h2>The Lay</h2>
+	<h1>A poem written in iambic pentameter using Generative AI, in the style of <em>The Lays of Ancient Rome.</em></h1>
+  <p>In bygone times, upon the frozen plain,<br>
+  Where Rodanos' waters fierce and wild did reign,<br>
+  There flourished a flower, rare and fair,<br>
+  The Necroanthemum beyond compare.</p>
+
+  <p>This delicate bloom of celestial grace,<br>
+  Did lure bold souls to seek its resting place.<br>
+  Yet treacherous cliffs exacted a toll,<br>
+  As seekers lost their lives, body and soul.</p>
+
+  <p>Undaunted by the cliffs' menacing frown,<br>
+  They pressed ahead, despite the danger shown.<br>
+  Like moths to flame, they sought the flower's light,<br>
+  Driven by longing, by passion's might.</p>
+
+  <p>In the golden age of Amphion's reign,<br>
+  The wanderer plucked the bloom without disdain.<br>
+  With tender care, he brought it to his home,<br>
+  In his lush garden, it began to roam.</p>
+
+  <p>Within those verdant halls, it did enchant,<br>
+  With fragrant whispers, tales of love and want.<br>
+  Epic stories and romances it wove,<br>
+  From its petals, secrets of old it strove.</p>
+
+  <p>To those who charmed its spirit, it revealed,<br>
+  Nature's wonders, its truths unconcealed.<br>
+  Amphion vowed to protect its tender bloom,<br>
+  From fate's cruel hand, from impending doom.</p>
+
+  <p>To mystic Clusium the wanderer went,<br>
+  Seeking counsel from the oracles, intent.<br>
+  Through valleys perilous, their whispers led,<br>
+  Of destiny's call, with a thread so dread.</p>
+
+  <p>The oracles spoke of a prophecy dire,<br>
+  Of nature's imbalance, of flames afire.<br>
+  To safeguard the bloom from chaos' cruel reign,<br>
+  A sentinel must arise, to ease the pain.</p>
+
+  <p>With magic's craft and artistry so true,<br>
+  Amphion forged a guardian to construe.<br>
+  Argyrorrhyton, by arcane might,<br>
+  Would tend the flower, through day and night.</p>
+
+  <p>Born from magic's spark, it stood with grace,<br>
+  A guardian, in that sacred place.<br>
+  With searing judgment, it repelled all ill,<br>
+  Ensuring the flower's beauty would fulfill.</p>
+
+  <p>Through emerald corridors, it did glide,<br>
+  Bringing succor to all, far and wide.<br>
+  More than machine, it lived as oath divine,<br>
+  Whispered by oracles, in ancient shrine.</p>
+
+  <p>Each step it took, guided by destiny's thread,<br>
+  A call to elevate, where nature led.<br>
+  Shall we surrender to its beguiling song?<br>
+  To chase the mystery, where we belong?</p>
+
+  <p>For those whose hearts beat with innovation's call,<br>
+  Let Argyrorrhyton's summons enthrall.</p>
+</section>
+		 </body>
+	</html>
