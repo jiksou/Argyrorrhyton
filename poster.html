@@ -309,20 +309,32 @@ button:hover {
   <h2>Introduction</h2>
     <h1>Technology</h1>
 <p>The convergence of Light Detection and Ranging (LIDAR), Simultaneous Localization and Mapping (SLAM), Robot Operating System 2 (ROS2), and lightweight machine vision like YOLOv8 is enabling a new era of cost-effective, intelligent robotic solutions. This project presents <em>"Argyrorrhyton"</em> - an autonomous robot that integrates these cutting-edge technologies to navigate indoor office environments and autonomously locate and water houseplants.</p>
-<p>Harnessing LIDAR for precision mapping and SLAM algorithms for localization, Ombrotron constructs 2D environmental maps to autonomously navigate corridors and rooms. The open-source ROS2 framework provides a modular software architecture, integrating sensor data, control algorithms, and IoT connectivity. Onboard YOLOv8 enables efficient vision-based detection of houseplants amidst cluttered scenes on embedded hardware. In addition, an encrypted wireless data interchange network is established between the server computer and the microcontrollers to provide electrical isolation between locomotion and control systems.</p>  
-<p>By combining these technologies, <em>Argyrorrhyton</em> demonstrates an affordable yet sophisticated solution for the emerging field of intelligent robotic horticulture maintenance. The system optimizes efficiency while minimizing costs compared to expensive alternatives. This interdisciplinary work advances state-of-the-art applications in autonomous robotics, machine perception, and intelligent agriculture within real-world office environments.</p>
+<p>Harnessing LIDAR for precision mapping and SLAM algorithms for localization, <em>Argyrorrhyton</em> constructs 2D environmental maps to autonomously navigate corridors and rooms. The open-source ROS2 framework provides a modular software architecture, integrating sensor data, control algorithms, and IoT connectivity. Onboard YOLOv8 enables efficient vision-based detection of houseplants in real-life scenarios on embedded hardware. In addition, an encrypted wireless data interchange network is established between the server computer and the microcontrollers to provide electrical isolation between locomotion and control systems.</p>  
+
 	<h1>Methodology</h1>
 </section>
 
   <!-- Sections -->
   <section id="section1">
-	  <h2>Vision System: <br><em>Phytomanteion</em></h2>
+	  <h2>Vision System: <em>Phytomanteion</em></h2>
     <h1>Implementing Computer Vision with MobileNetV2 SSD</h1>
+	  <p>In my FYP proposal study, it is envisioned that the computer vision model used will be MobileNetV2 SSD, citing its lightweight capacities suitable for deployment on edge devices. However, preliminary attempts to train a MobileNetV2 SSD inference model using a dataset of 32 images, courtesy of <em>Edgeimpulse.com</em>, is deemed inconvenient to use, due to model hallucinations and other considerations such as <em>Edgeimpulse</em> only provides free CPU training and the wrapper function is written in C++ rather than Python. These restrictions discourages me from using MobileNetV2 SSD as the vision algorithm for the project. </p>
+	  	  <figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/fomo1.jpg" alt="img">
+    <figcaption><em>Edgeimpulse.com</em> provided online training capabilities using MobileNetV2 SSD model.</figcaption>
+</figure>
+	  	  <figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/fomo2.jpg" alt="img">
+    <figcaption>A trained demonstration model hallucinates extensively and is deemed unsafe to use.</figcaption>
+</figure>
+	  <p><br>Instead, I resorted to using YOLOv8, which is a potent vision algorithm maintained by <em>Ultralytics</em>, and can be trained on GPU locally using standard YOLO datasets on the pyTorch framework.</p>
+
+
 	  <h1>Implementing Computer Vision with YOLOv8n</h1>
-    <p>To enable real-time perception of houseplants for targeted irrigation, an on-board vision system utilizing the lightweight YOLOv8n object detection model was developed. A dataset of 914 houseplant images from <em>Aspidistra</em> and <em>Epipremnum</em> species was curated by extracting frames from videos recorded by a robotic platform in indoor environments of a local university, simulating real-life operating conditions. The dataset was further augmented to 2113 images, with 1893 for training and 190 for validation, using automated labeling on <em>roboflow.com</em> and preprocessing techniques like resizing and noise introduction. Transfer learning was employed by initializing YOLOv8n with pre-trained weights and the model is trained locally. However, overfitting was observed around the 60th iteration due to limited dataset size and diversity, highlighting the need for further optimization strategies to improve generalization capabilities.</p>
+    <p>To enable real-time perception of houseplants for targeted irrigation, an on-board vision system utilizing the lightweight YOLOv8n object detection model was developed. A dataset of 914 houseplant images from <em>Aspidistra</em> and <em>Epipremnum</em> species was collected by extracting frames from videos recorded by a robotic vehicle in indoor environments of a local university, simulating real-life operating conditions. The dataset was further augmented to 2113 images, with 1893 for training and 190 for validation, using automated labeling on <em>Roboflow.com</em> and preprocessing techniques like resizing and noise introduction. Transfer learning was employed by initializing YOLOv8n with pre-trained weights and the model is trained locally. However, overfitting was observed around the 60th iteration due to limited dataset size and diversity, highlighting the need for further optimization strategies to improve generalization capabilities.</p>
 <figure>
     <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo1.png" alt="img">
-    <figcaption>Auto-labelling with Roboflow.com</figcaption>
+    <figcaption>Auto-labelling with <em>Roboflow.com</em></figcaption>
 </figure>
 <br>
 
@@ -334,7 +346,7 @@ button:hover {
 
 <figure>
     <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo3.png" alt="img">
-    <figcaption>Data augmentation and exporting with Roboflow.com</figcaption>
+    <figcaption>Data augmentation and exporting with <em>Roboflow.com</em></figcaption>
 </figure>
 <br>
 
@@ -343,7 +355,7 @@ button:hover {
     <figcaption>Training is done locally, monitored with Tensorboard</figcaption>
 </figure><br></section>
 	  <section id="SLAM">
-<h2>Navigation System: <br><em>Ombropompon</em></h2>
+<h2>Navigation System: <em>Ombropompon</em></h2>
 	 <h1>Implementing SLAM and Pathfinding with Google Cartographer SLAM and Nav2 SMAC (A* Algorithm)</h1>
     <p>Precise robot localization and mapping leveraged Google Cartographer SLAM integrated with ROS2, utilizing a planar LIDAR for forward scanning. SLAM maps were visualized in Rviz2 along with the robot's trajectory for monitoring performance. The vision system's polar houseplant coordinates were transformed to Cartesian positions on the SLAM-derived maps. These global houseplant locations served as waypoints for ROS2 Nav2's SMAC planner to compute obstacle-free navigation routes across the field, dynamically adjusting with new map data, enabling autonomous precision irrigation of detected plants.</p>
 	  <figure>
@@ -353,7 +365,7 @@ button:hover {
   </section>
 
 <section id="section2">
-  <h2>Encrypted Ad-hoc WSN Data Interchange System: <br><em>Hieroglossa</em></h2>
+  <h2>Encrypted Ad-hoc WSN Data Interchange System: <em>Hieroglossa</em></h2>
   <p>
     To ensure secure and reliable communication between the main computer and distributed microcontrollers, an encrypted wireless sensor network (WSN) architecture was implemented, codenamed <em>Hieroglossa</em>.
   </p>
@@ -373,7 +385,7 @@ button:hover {
   </div>
 </section>
 <section id="section4">
-    <h2>RFID Asset Management Database: <br><em>Phytognomon</em></h2>
+    <h2>RFID Asset Management Database: <em>Phytognomon</em></h2>
     <p>This is the content of Section 3.</p>
 </section>
 <section id="section3">
