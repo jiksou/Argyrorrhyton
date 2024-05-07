@@ -29,9 +29,21 @@ h1, h2, h3, h4 {
   color: #2c3e50;
 }
 
-p {
-  margin-bottom: 1.5rem;
-  color: #555;
+/* Centering the <quotation> section */
+quotation {
+  max-width: 80%; /* Adjust the percentage as needed */
+  padding: 1rem; /* Reduced padding */
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Added text-align: center; here */
+}
+
+/* Ensuring proper line spacing */
+quotation p {
+  line-height: 1.5; /* Adjust the value as per your preference */
+  margin: 0; /* Reset margin to prevent extra space */
+  font-size: 16px; /* Adjust font size as needed */
 }
 #container {
   max-width: 1024px;
@@ -82,9 +94,14 @@ section {
 	  @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 h2 {
   font-size: 32px;
-  font-family: 'Marcellus', sans-serif;
+  font-family: 'Marcellus', serif;
 }
-
+section h5 {
+	font-size: 16px;
+	font-family: 'Marcellus', serif;
+  display: inline-block; /* This will treat the h5 elements as inline-block elements */
+  text-align: center; /* This will center the text within the h5 elements */
+}
 /* Cards */
 .card {
   background-color: #f9f9f9;
@@ -93,264 +110,11 @@ h2 {
   margin-bottom: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-/* Buttons */
-button {
-  background-color: #2c3e50;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+blockquote {
+  margin: 0 auto; /* This will center the blockquote horizontally */
+  max-width: 80%; /* Adjust as needed */
+  text-align: center; /* Center align the text within the blockquote */
 }
-
-button:hover {
-  background-color: #34495e;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out;
-}
-.content-menu {
-  position: fixed;
-  left: 20px;
-  top: 200px;
-  width: 200px;
-  background-color: #f1f1f1;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.content-menu ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.content-menu li {
-  margin-bottom: 10px;
-}
-
-.content-menu a {
-  display: block;
-  color: #333;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 3px;
-  transition: background-color 0.3s ease;
-}
-
-.content-menu a:hover {
-  background-color: #ddd;
-}
-/* Plaque */
-.plaque {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #34495e;
-  color: #fff;
-  text-align: center;
-  padding: 2rem;
-}
-
-.plaque-content {
-  max-width: 800px;
-  padding: 2rem;
-  background-color: #2c3e50;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.plaque h1,
-.plaque h2,
-.plaque h3,
-.plaque h4 {
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.line {
-  height: 1px;
-  background-color: #fff;
-  margin: 1rem 0;
-}
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #4CAF50; /* Green */
-  color: white;
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: #45a049;
-}
-/* Poster Section */
-.poster-section {
-  margin-bottom: 2rem;
-  padding: 2rem;
-  border-radius: 5px;
-  background-color: #f4f4f4;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.subsection {
-  margin-bottom: 1rem;
-}
-
-.subsection h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-.popup {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.popup-content {
-  background-color: #fefefe;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 50%;
-}
-
-.close-btn {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close-btn:hover,
-.close-btn:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-  </style>
-</head>
-<body><!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Yisu Fang's FYP Poster Page</title>
-	<link href="https://fonts.googleapis.com/css?family=Reddit+Sans" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Marcellus" rel="stylesheet">
-  <style>
-/* Reset and base styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Reddit Sans', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f0f0f0;
-}
-.responsive-image {
-  max-width: 100%;
-  height: auto;
-}
-/* Typography */
-h1, h2, h3, h4 {
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #2c3e50;
-}
-
-p {
-  margin-bottom: 1.5rem;
-  color: #555;
-}
-#container {
-  max-width: 1024px;
-  margin: 0 auto;
-}
-/* Layout */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-/* Top bar */
-.top-bar {
-  background-color: #34495e;
-  color: #fff;
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.top-bar h2 {
-  color: #fff;
-  margin-bottom: 0;
-}
-
-.top-bar select {
-  background-color: #2c3e50;
-  color: #fff;
-  border: none;
-  padding: 0.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-/* Sections */
-section {
-  margin-bottom: 2rem;
-  padding: 2rem;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-	  @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
-h2 {
-  font-size: 32px;
-  font-family: 'Marcellus', sans-serif;
-}
-
-/* Cards */
-.card {
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 /* Buttons */
 button {
   background-color: #2c3e50;
@@ -513,13 +277,44 @@ button:hover {
   </style>
 </head>
 <body>
-	  <div class="top-bar">
+	<nav class="content-menu">
+  <ul>
+    <li><a href="#section0">Credits</a></li>
+    <li><a href="#aest">Aesthetics</a></li>
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#section1">CV</a></li>
+	  <li><a href="#SLAM">SLAM</a></li>
+    <li><a href="#section2">WSN</a></li>
+	      <li><a href="#section4">RFID</a></li>
+    <li><a href="#section3">Assembly</a></li>
+  </ul>
+</nav>
+  <div class="top-bar">
     <h2><em>Argyrorrhyton:</em>
 		Autonomous Houseplant Irrigation Robot</h2>
 	    <nav>
-    <a href="poster.html" class="button">the Science Button</a>
   </nav>
   </div>
+<section id="section0" class="plaque">
+  <div class="plaque-content">
+    <h2>Xi'an-Jiaotong Liverpool University <br> School of Internet of Things</h2>
+<div class="line"></div>
+    <h4>
+      Student:<br />
+      Yisu Fang <br>2033451
+      <div class="line"></div>
+      Supervisors:<br />
+      Dr. Hadyan Hafizh<br />
+      Dr. Muhammad Ateeq
+      <div class="line"></div>
+      Procurement:<br />
+      Yingchao Lyu
+      <div class="line"></div>
+      Dean:<br />
+      Miguel Baptista Nunes
+    </h4>
+  </div>
+</section>
 	<section id="section0" class="plaque">
   <div class="plaque-content">
     <h2>Art Direction and Special Thanks</h2>
@@ -545,14 +340,6 @@ button:hover {
   </div>
 </section>
 	 <div id="container">
-			  <section id="aest">  <h2>Engineering</h2>
-				  <h1>Internet of Things, Robotics, Artificial Intelligence &c.</h1>
-				 <!-- <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/aegisona.jpg" alt="img" class="responsive-image">-->
-				  <p>The current page is the aesthetics documentation page.</p>
-				  <a href="poster.html" class="button">the Science Button</a>
-				  <p><br>This project is designed with engineering in mind. <br>Please click the science button to see the engineering documentation page. 
-				  </p>
-			  </section>
 		 <section id="etym">
   <h2>Etymology</h2>
 <section>
@@ -566,71 +353,170 @@ button:hover {
 
 	<p><a href="https://lsj.gr/wiki/%E1%BC%80%CF%81%CE%B3%CF%85%CF%81%CF%8C%CF%81%CF%81%CF%85%CF%84%CE%BF%CF%82">H. G. Liddell, R. Scott, and H. S. Jones, "ἀργυρόρρυτος," A Greek-English Lexicon.</a></p>
 </section>
-<section id="poem">
-  <h2>The Lay</h2>
-	<h1>A poem written in iambic pentameter using Generative AI, in the style of <em>The Lays of Ancient Rome.</em></h1>
-  <p>In bygone times, upon the frozen plain,<br>
-  Where Rodanos' waters fierce and wild did reign,<br>
-  There flourished a flower, rare and fair,<br>
-  The Necroanthemum beyond compare.</p>
+			  <section id="aest">  <h2>Aesthetics</h2>
+				  <h1>Graphics Design, Industrial Design, &c.</h1>
+				   <!--<a href="art.html" class="button"></a>-->
+				  <!--<img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/aegisona.jpg" alt="img" class="responsive-image">-->
+				  <p>The current page is the engineering documentation page.</p>
+			  </section>
+	
+<section id="intro">
+  <h2>Introduction</h2>
+	 <blockquote>
+		 —'O stream!<br>
+Whose source is inaccessibly profound,<br>
+Whither do thy mysterious waters tend?<br>
+Thou imagest my life.
+ <br><br>
+		 <em>-- Alastor, or the Spirit of Solitude</em>, Percy Bysshe Shelley      </blockquote><br><br>
+	
+    <h1>Technology</h1>
+<p>The convergence of Light Detection and Ranging (LIDAR), Simultaneous Localization and Mapping (SLAM), Robot Operating System 2 (ROS2), and lightweight machine vision like YOLOv8 is enabling a new era of cost-effective, intelligent robotic solutions. This project presents <em>"Argyrorrhyton"</em> - an autonomous robot that integrates these cutting-edge technologies to navigate indoor office environments and autonomously locate and water houseplants.</p>
+<p>Harnessing LIDAR for precision mapping and SLAM algorithms for localization, <em>Argyrorrhyton</em> constructs 2D environmental maps to autonomously navigate corridors and rooms. The open-source ROS2 framework provides a modular software architecture, integrating sensor data, control algorithms, and IoT connectivity. Onboard YOLOv8 enables efficient vision-based detection of houseplants in real-life scenarios on embedded hardware. In addition, an encrypted wireless data interchange network is established between the server computer and the microcontrollers to provide electrical isolation between locomotion and control systems.</p>  
 
-  <p>This delicate bloom of celestial grace,<br>
-  Did lure bold souls to seek its resting place.<br>
-  Yet treacherous cliffs exacted a toll,<br>
-  As seekers lost their lives, body and soul.</p>
-
-  <p>Undaunted by the cliffs' menacing frown,<br>
-  They pressed ahead, despite the danger shown.<br>
-  Like moths to flame, they sought the flower's light,<br>
-  Driven by longing, by passion's might.</p>
-
-  <p>In the golden age of Amphion's reign,<br>
-  The wanderer plucked the bloom without disdain.<br>
-  With tender care, he brought it to his home,<br>
-  In his lush garden, it began to roam.</p>
-
-  <p>Within those verdant halls, it did enchant,<br>
-  With fragrant whispers, tales of love and want.<br>
-  Epic stories and romances it wove,<br>
-  From its petals, secrets of old it strove.</p>
-
-  <p>To those who charmed its spirit, it revealed,<br>
-  Nature's wonders, its truths unconcealed.<br>
-  Amphion vowed to protect its tender bloom,<br>
-  From fate's cruel hand, from impending doom.</p>
-
-  <p>To mystic Clusium the wanderer went,<br>
-  Seeking counsel from the oracles, intent.<br>
-  Through valleys perilous, their whispers led,<br>
-  Of destiny's call, with a thread so dread.</p>
-
-  <p>The oracles spoke of a prophecy dire,<br>
-  Of nature's imbalance, of flames afire.<br>
-  To safeguard the bloom from chaos' cruel reign,<br>
-  A sentinel must arise, to ease the pain.</p>
-
-  <p>With magic's craft and artistry so true,<br>
-  Amphion forged a guardian to construe.<br>
-  Argyrorrhyton, by arcane might,<br>
-  Would tend the flower, through day and night.</p>
-
-  <p>Born from magic's spark, it stood with grace,<br>
-  A guardian, in that sacred place.<br>
-  With searing judgment, it repelled all ill,<br>
-  Ensuring the flower's beauty would fulfill.</p>
-
-  <p>Through emerald corridors, it did glide,<br>
-  Bringing succor to all, far and wide.<br>
-  More than machine, it lived as oath divine,<br>
-  Whispered by oracles, in ancient shrine.</p>
-
-  <p>Each step it took, guided by destiny's thread,<br>
-  A call to elevate, where nature led.<br>
-  Shall we surrender to its beguiling song?<br>
-  To chase the mystery, where we belong?</p>
-
-  <p>For those whose hearts beat with innovation's call,<br>
-  Let Argyrorrhyton's summons enthrall.</p>
+	<h1>Methodology</h1>
 </section>
-		 </body>
-	</html>
+
+  <!-- Sections -->
+  <section id="section1">
+	  <h2>Vision System: <em>Phytomantis</em></h2>
+	  		     <blockquote>
+The clouds seem colourless, and even joy is rather sorrowful there; but fountains of fresh water spring out of the rocks, and the eyes of the young girls are like the green fountains in which, with their beds of waving herbs, the sky is mirrored. <br><br>
+			  <em>-- Prayer on the Acropolis</em>, Ernest Renan		      </blockquote><br><br>
+    <h1>Implementing Computer Vision with MobileNetV2 SSD</h1>
+	  <p>In my FYP proposal study, it is envisioned that the computer vision model used will be MobileNetV2 SSD, citing its lightweight capacities suitable for deployment on edge devices. However, preliminary attempts to train a MobileNetV2 SSD inference model using a dataset of 32 images, courtesy of <em>Edgeimpulse.com</em>, is deemed inconvenient to use, due to model hallucinations and other considerations such as <em>Edgeimpulse</em> only provides free CPU training and the wrapper function is written in C++ rather than Python. These restrictions discourages me from using MobileNetV2 SSD as the vision algorithm for the project. </p>
+	  	  <figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/fomo1.jpg" alt="img">
+    <figcaption><em>Edgeimpulse.com</em> provided online training capabilities using MobileNetV2 SSD model.</figcaption>
+</figure>
+	  	  <figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/fomo2.jpg" alt="img">
+    <figcaption>A trained demonstration model hallucinates extensively and is deemed unsafe to use.</figcaption>
+</figure>
+	  <p><br>Instead, I resorted to using YOLOv8, which is a potent vision algorithm maintained by <em>Ultralytics</em>, and can be trained on GPU locally using standard YOLO datasets on the pyTorch framework.</p>
+
+
+	  <h1>Implementing Computer Vision with YOLOv8n</h1>
+    <p>To enable real-time perception of houseplants for targeted irrigation, an on-board vision system utilizing the lightweight YOLOv8n object detection model was developed. A dataset of 914 houseplant images from <em>Aspidistra</em> and <em>Epipremnum</em> species was collected by extracting frames from videos recorded by a robotic vehicle in indoor environments of a local university, simulating real-life operating conditions. The dataset was further augmented to 2113 images, with 1893 for training and 190 for validation, using automated labeling on <em>Roboflow.com</em> and preprocessing techniques like resizing and noise introduction. Transfer learning was employed by initializing YOLOv8n with pre-trained weights and the model is trained locally. However, overfitting was observed around the 60th iteration due to limited dataset size and diversity, highlighting the need for further optimization strategies to improve generalization capabilities.</p>
+<figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo1.png" alt="img">
+    <figcaption>Auto-labelling with <em>Roboflow.com</em></figcaption>
+</figure>
+<br>
+
+<figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo2.png" alt="img">
+    <figcaption>Manual adding label instances</figcaption>
+</figure>
+<br>
+
+<figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo3.png" alt="img">
+    <figcaption>Data augmentation and exporting with <em>Roboflow.com</em></figcaption>
+</figure>
+<br>
+
+<figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo4.png" alt="img">
+    <figcaption>Training is done on a GTX1650Ti GPU and monitored with Tensorboard. <br>Early stopping is eventually invoked to prevent overfitting.</figcaption>
+</figure><br>
+	  <figure>
+    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/resized_Screenshot%20from%202024-05-07%2019-18-04.png" alt="img">
+    <figcaption>Real-time object recognition running on robot, on an i5-4670T CPU, at ~60ms per frame (~17FPS)</figcaption>
+</figure><br>
+			 
+			 </section>
+	<section id="SLAM">
+  <h2>Navigation System: <em>Ombropompon</em></h2>
+  <blockquote>
+    Sometimes on lonely mountain-meres<br>
+    I find a magic bark;<br>
+    I leap on board: no helmsman steers:<br>
+    I float till all is dark.<br><br>
+    <em>-- Sir Galahad</em>, Alfred Tennyson<br><br>
+  </blockquote>
+	 <h1>Implementing SLAM and Pathfinding with SLAM Toolbox and Nav2 SMAC (A* Algorithm)</h1>
+    <p>Precise robot localization and mapping leveraged Google Cartographer SLAM integrated with ROS2, utilizing a planar LIDAR for forward scanning. SLAM maps were visualized in Rviz2 along with the robot's trajectory for monitoring performance. The vision system's polar houseplant coordinates were transformed to Cartesian positions on the SLAM-derived maps. These global houseplant locations served as waypoints for ROS2 Nav2's SMAC planner to compute obstacle-free navigation routes across the field, dynamically adjusting with new map data, enabling autonomous precision irrigation of detected plants.</p>
+	  <figure>
+    <br><img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/slam1.png" alt="img">
+    <figcaption>LIDAR visualization in Rviz2</figcaption>
+</figure>
+		    <figure>
+    <br><img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/resized_slam3.jpg" alt="img">
+    <figcaption>Multiple driver issues, configurations and incompatibility errors are resolved to make SLAM working as intended</figcaption>
+</figure>
+		      <figure>
+    <br><img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/resized_Screenshot%20from%202024-05-07%2018-19-42.png" alt="img">
+    <figcaption>Transform node topology and SLAM</figcaption>
+</figure>
+		    <figure>
+    <br><img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/resized_Screenshot%20from%202024-05-05%2016-08-03.png" alt="img">
+    <figcaption>Costmap generation using Nav2</figcaption>
+</figure>
+</section>
+
+<section id="section2">
+  <h2>Encrypted Ad-hoc WSN Data Interchange System: <em>Hieroglossa</em></h2>
+			  <blockquote>
+ By the Nine Gods he swore it,<br>
+          And named a trysting day,<br>
+     And bade his messengers ride forth,<br>
+     East and west and south and north,<br>
+          To summon his array.<br><br>
+			  <em>-- Lays of Ancient Rome</em>, Thomas Babington Macaulay		    </blockquote><br><br>
+  <p>
+    To ensure secure and reliable communication between the main computer and distributed microcontrollers, an encrypted wireless sensor network (WSN) architecture was implemented, codenamed <em>Hieroglossa</em>.
+  </p>
+
+  <div class="subsection">
+    <h3>Architecture</h3>
+    <p>
+      The <em>Hieroglossa</em> WSN comprised the central robot computer acting as the base station, along with several microcontroller nodes interfaced to sensors and actuators like pumps and motors. This decentralized topology enabled modular expansion of functionality, as well as physical isolation from single-point electrical failures.
+    </p>
+  </div>
+
+  <div class="subsection">
+    <h3>Protocol Syntax</h3>
+    <p>
+      <em>Hieroglossa</em> protocol governs the syntax for exchanging data packets over the wireless network. This protocol defined message formats, addressing schemes, and encryption standards to prevent eavesdropping or malicious interference.
+    </p>
+  </div>
+</section>
+<section id="section4">
+    <h2>RFID Houseplant Management Database: <em>Phytognomon</em></h2>
+		 <blockquote>
+The wither'd Misses! how they prose<br>
+O'er books of travell'd seamen,<br>
+And show you slips of all that grows<br>
+From England to Van Diemen.
+ <br><br>
+		 <em>-- Amphion</em>, Alfred Tennyson     </blockquote><br><br>
+    <p>This is the content of Section 3.</p>
+			    <figure>
+    <br><img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/resized_phyt1.jpg" alt="img">
+    <figcaption>Phytognomon GUI is integrated with Phytomantis in constructing a database of irrigated plants.</figcaption>
+</figure>
+				    <figure>
+    <br><img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/resized_phyt2.jpg" alt="img">
+    <figcaption>The RFID reader is connected to Argyrorrhyton mainframe via a RS232-USB converter.</figcaption>
+</figure>
+</section>
+<section id="section3">
+    <h2>Hardware Assembly</h2>
+    <p>This is the content of Section 3.</p>
+  </section>
+  
+<script>
+    function scrollToSection(sectionId) {
+      if (sectionId) {
+        const section = document.querySelector(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+
+ 
+  </script>
+</body>
+</html>
