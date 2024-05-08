@@ -55,7 +55,10 @@ quotation p {
   margin: 0 auto;
   padding: 1rem;
 }
-
+.container img {
+  display: block; /* This will make the image a block-level element */
+  margin: 0 auto; /* This will center the image horizontally */
+}
 /* Top bar */
 .top-bar {
   background-color: #34495e;
@@ -140,7 +143,24 @@ button:hover {
     opacity: 1;
   }
 }
+figure {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 100%;
+}
 
+figure img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
 .fade-in {
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -368,7 +388,7 @@ Whose source is inaccessibly profound,<br>
 Whither do thy mysterious waters tend?<br>
 Thou imagest my life.
  <br><br>
-		 <em>-- Alastor, or the Spirit of Solitude</em>, Percy Bysshe Shelley      </blockquote><br><br>
+		 <em>—— Alastor, or the Spirit of Solitude</em>, Percy Bysshe Shelley      </blockquote><br><br>
 	
     <h1>Technology</h1>
 <p>The convergence of Light Detection and Ranging (LIDAR), Simultaneous Localization and Mapping (SLAM), Robot Operating System 2 (ROS2), and lightweight machine vision like YOLOv8 is enabling a new era of cost-effective, intelligent robotic solutions. This project presents <em>"Argyrorrhyton"</em> - an autonomous robot that integrates these cutting-edge technologies to navigate indoor office environments and autonomously locate and water houseplants.</p>
@@ -382,7 +402,7 @@ Thou imagest my life.
 	  <h2>Vision System: <em>Phytomantis</em></h2>
 	  		     <blockquote>
 The clouds seem colourless, and even joy is rather sorrowful there; but fountains of fresh water spring out of the rocks, and the eyes of the young girls are like the green fountains in which, with their beds of waving herbs, the sky is mirrored. <br><br>
-			  <em>-- Prayer on the Acropolis</em>, Ernest Renan		      </blockquote><br><br>
+			  <em>—— Prayer on the Acropolis</em>, Ernest Renan		      </blockquote><br><br>
     <h1>Implementing Computer Vision with MobileNetV2 SSD</h1>
 	  <p>In my FYP proposal study, it is envisioned that the computer vision model used will be MobileNetV2 SSD, citing its lightweight capacities suitable for deployment on edge devices. However, preliminary attempts to train a MobileNetV2 SSD inference model using a dataset of 32 images, courtesy of <em>Edgeimpulse.com</em>, is deemed inconvenient to use, due to model hallucinations and other considerations such as <em>Edgeimpulse</em> only provides free CPU training and the wrapper function is written in C++ rather than Python. These restrictions discourages me from using MobileNetV2 SSD as the vision algorithm for the project. </p>
 	  	  <figure>
@@ -406,7 +426,7 @@ The clouds seem colourless, and even joy is rather sorrowful there; but fountain
 
 <figure>
     <img src="photo/yolo2.png" alt="img">
-    <figcaption>Manual adding label instances</figcaption>
+    <figcaption>Manually adding label instances</figcaption>
 </figure>
 <br>
 
@@ -429,11 +449,13 @@ The clouds seem colourless, and even joy is rather sorrowful there; but fountain
 	<section id="SLAM">
   <h2>Navigation System: <em>Ombropompon</em></h2>
   <blockquote>
-    Sometimes on lonely mountain-meres<br>
-    I find a magic bark;<br>
-    I leap on board: no helmsman steers:<br>
-    I float till all is dark.<br><br>
-    <em>-- Sir Galahad</em>, Alfred Tennyson<br><br>
+  "Yet mark those trees, two miles away,<br>
+All clustered in a clump:<br>
+If you could trot there twice a day,<br>
+Nor ever pause for rest or play.<br>
+In the far future — Who can say?——<br>
+You may be fit to jump." <br><br>
+    <em>—— Sylvie and Bruno Concluded</em>, Lewis Carroll<br><br>
   </blockquote>
 	 <h1>Implementing SLAM and Pathfinding with SLAM Toolbox and Nav2 SMAC (A* Algorithm)</h1>
     <p>Precise robot localization and mapping leveraged Google Cartographer SLAM integrated with ROS2, utilizing a planar LIDAR for forward scanning. SLAM maps were visualized in Rviz2 along with the robot's trajectory for monitoring performance. The vision system's polar houseplant coordinates were transformed to Cartesian positions on the SLAM-derived maps. These global houseplant locations served as waypoints for ROS2 Nav2's SMAC planner to compute obstacle-free navigation routes across the field, dynamically adjusting with new map data, enabling autonomous precision irrigation of detected plants.</p>
@@ -463,7 +485,7 @@ The clouds seem colourless, and even joy is rather sorrowful there; but fountain
      And bade his messengers ride forth,<br>
      East and west and south and north,<br>
           To summon his array.<br><br>
-			  <em>-- Lays of Ancient Rome</em>, Thomas Babington Macaulay		    </blockquote><br><br>
+			  <em>—— Lays of Ancient Rome</em>, Thomas Babington Macaulay		    </blockquote><br><br>
   <p>
     To ensure secure and reliable communication between the main computer and distributed microcontrollers, an encrypted wireless sensor network (WSN) architecture was implemented, codenamed <em>Hieroglossa</em>.
   </p>
@@ -490,7 +512,7 @@ O'er books of travell'd seamen,<br>
 And show you slips of all that grows<br>
 From England to Van Diemen.
  <br><br>
-		 <em>-- Amphion</em>, Alfred Tennyson     </blockquote><br><br>
+		 <em>—— Amphion</em>, Alfred Tennyson     </blockquote><br><br>
     <p>This is the content of Section 3.</p>
 			    <figure>
     <br><img src="photo/resized_phyt1.jpg" alt="img">
