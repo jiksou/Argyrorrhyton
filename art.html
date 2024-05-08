@@ -363,10 +363,13 @@ figcaption {
 		 <section id="etym">
   <h2>Etymology</h2>
 <section>
-    <p>The ancient Greek word "<em>argyrorrhyton</em>" (ἀργυρόρρυτον) is a compound word derived from two components:</p>
-    <p>The first part of the word, "<em>argyros</em>," is an adjective meaning "silvery" or "made of silver." It is derived from the Greek word "<em>argyros</em>" (ἄργυρος), meaning "silver."</p>
-    <p>The second part, "<em>rhyton</em>," is a noun referring to a specific type of ancient Greek drinking vessel. A <em>rhyton</em> was a distinctive container made from ceramic, metal, or even horn, with one end shaped like an animal's head or a similar design, and the other end being the opening from which the liquid was consumed.</p>
-    <p>Therefore, the word "<em>argyrorrhyton</em>" (ἀργυρόρρυτον) literally means "a silver <em>rhyton</em>" or "a <em>rhyton</em> made of silver." It refers to a particular type of ancient Greek drinking vessel, specifically a <em>rhyton</em> crafted from silver.</p>
+	<h1><em>Argyrorrhyton</em> - the Silver Rhyton Cup</h1>
+	<p>Per my personal naming tradition, my software projects are codenamed in Ancient Greek, hardware codenamed in Latin, usually with liturgical connotations.</p><br>
+	<p>The project is the third iteration of an irrigation robot, codenamed under Latin <em>Automaticum Rigationi Robotum III</em> (ARGR-3).</p><br>
+    <p>The name is reinteprated as the Ancient Greek word "<em>argyrorrhyton</em>" (ἀργυρόρρυτον), which is a compound word derived from two components:</p>
+    <p>The first part of the word, "<em>argyros</em>," is an adjective meaning "silvery" or "made of silver.</p>
+    <p>The second part, "<em>rhyton</em>," is a noun referring to a specific type of ancient Greek libation vessel. A <em>rhyton</em> was a distinctive container made from ceramic, metal, or even horn, with one end shaped like an animal's head or a similar design, and the other end being the opening from which the liquid was consumed.</p><br>
+    <p>Therefore, the word "<em>argyrorrhyton</em>" (ἀργυρόρρυτον) literally means "a silver <em>rhyton</em>" or "a <em>rhyton</em> made of silver." It refers to a particular type of ancient Greek drinking vessel crafted from silver.</p><strong></strong><br>
     <p>The word can also be analyzed as a compound adjective of "<em>argyros</em>" (silver) and "<em>rhytos</em>" (flowing or pouring), declined in the neuter gender.</p>
 	<img src="photo/1714729544080.png" alt="img">
  <p>The source material given is a citation from <em>The Liddell, Scott, Jones Ancient Greek Lexicon </em>(LSJ).</p><p>The word <em>argyrorrhytos, -on </em> is attested in Euripides' play "Helen" line 386, describing a location "beside a silver stream" specifically referencing the banks of the river Hebrus.</p>
@@ -374,7 +377,12 @@ figcaption {
 	<p><a href="https://lsj.gr/wiki/%E1%BC%80%CF%81%CE%B3%CF%85%CF%81%CF%8C%CF%81%CF%81%CF%85%CF%84%CE%BF%CF%82">H. G. Liddell, R. Scott, and H. S. Jones, "ἀργυρόρρυτος," A Greek-English Lexicon.</a></p>
 </section>
 			  <section id="aest">  <h2>Aesthetics</h2>
-				  <h1>Graphics Design, Industrial Design, &c.</h1>
+				  
+				  <h1>Graphics Design</h1>
+				   <!--<a href="art.html" class="button"></a>-->
+				  <!--<img src="photo/aegisona.jpg" alt="img" class="responsive-image">-->
+				  <p>The current page is the engineering documentation page.</p><br>
+				   <h1>Industrial Design</h1>
 				   <!--<a href="art.html" class="button"></a>-->
 				  <!--<img src="photo/aegisona.jpg" alt="img" class="responsive-image">-->
 				  <p>The current page is the engineering documentation page.</p>
@@ -487,22 +495,25 @@ You may be fit to jump." <br><br>
           To summon his array.<br><br>
 			  <em>—— Lays of Ancient Rome</em>, Thomas Babington Macaulay		    </blockquote><br><br>
   <p>
-    To ensure secure and reliable communication between the main computer and distributed microcontrollers, an encrypted wireless sensor network (WSN) architecture was implemented, codenamed <em>Hieroglossa</em>.
-  </p>
+    To ensure secure and reliable communication between the mainframe computer and distributed microcontrollers, an encrypted wireless sensor network (WSN) architecture was implemented, codenamed <em>Hieroglossa</em>. Due to it being an unpublished project under active development, this section will only delve into its functions briefly. 
+  </p><br>
 
   <div class="subsection">
     <h3>Architecture</h3>
     <p>
-      The <em>Hieroglossa</em> WSN comprised the central robot computer acting as the base station, along with several microcontroller nodes interfaced to sensors and actuators like pumps and motors. This decentralized topology enabled modular expansion of functionality, as well as physical isolation from single-point electrical failures.
+      The <em>Hieroglossa</em> WSN comprised the robot computer mainframe running the daemon, and its coordinator node acting as the base station, along with several microcontroller nodes interfaced to sensors and actuators like pumps and motors. This decentralized topology enabled modular expansion of functionality, as well as physical isolation from single-point electrical failures. The <em>Hieroglossa</em> relies on FreeRTOS running on ESP32 microcontrollers, and publishes data over WiFi mesh network to the coordinator node connected to the Linux mainframe. The individual keys are exchanged after each pairing over ECDH. The data is encrypted in AES-128 and the variables are formatted in JSON.
     </p>
   </div>
 
   <div class="subsection">
-    <h3>Protocol Syntax</h3>
+    <h3>The Daemon</h3>
     <p>
-      <em>Hieroglossa</em> protocol governs the syntax for exchanging data packets over the wireless network. This protocol defined message formats, addressing schemes, and encryption standards to prevent eavesdropping or malicious interference.
+      The <em>Hieroglossa</em> daemon decrypts and parses the data packets delievered over the mesh network, reading from the coordinator node through Linux serial port. This protocol decodes JSON messages, parsing variables and broadcasting them as ROS2 topics for other daemons to use. It can also subscribe to ROS2 topics and broadcast them in encrypted message strings.
     </p>
-  </div>
+  </div>	<figure>
+    <br><img src="photo/hieg1.jpg" alt="img">
+    <figcaption>AES encryption-decryption demonstration</figcaption>
+</figure>
 </section>
 <section id="section4">
     <h2>RFID Houseplant Management Database: <em>Phytognomon</em></h2>
@@ -513,7 +524,7 @@ And show you slips of all that grows<br>
 From England to Van Diemen.
  <br><br>
 		 <em>—— Amphion</em>, Alfred Tennyson     </blockquote><br><br>
-    <p>This is the content of Section 3.</p>
+    <p>Phytognomon is the RFID reader and database system recording the information of irrigated plant instances. The database daemon records time, location (ROS2 odometry transform) and the tag UID of the irrigated plant in a CSV form. It is accompanied with a GUI to view and manipulate the system. <br>It will be further integrated with the other daemons to cooperate in decision-making.</p>
 			    <figure>
     <br><img src="photo/resized_phyt1.jpg" alt="img">
     <figcaption>Phytognomon GUI is integrated with Phytomantis in constructing a database of irrigated plants.</figcaption>
