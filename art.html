@@ -681,15 +681,21 @@ Revering, supplicating for divine patronage<br>
 </p>
 			 </section><p>Yisu Fang <br>方 奕甦</p>
 <script>
-    function scrollToSection(sectionId) {
-      if (sectionId) {
-        const section = document.querySelector(sectionId);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
+ function scrollToSection(sectionId) {
+  if (sectionId) {
+    const section = document.querySelector(sectionId);
+    if (section) {
+      const header = document.querySelector('.top-bar');
+      const headerHeight = header.offsetHeight;
+      const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
+      const scrollPosition = sectionTop - headerHeight-50;
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth'
+      });
     }
-
+  }
+}
  
   </script>
 </body>
