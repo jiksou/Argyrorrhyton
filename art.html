@@ -348,7 +348,7 @@ button:hover {
     <p>The second part, "<em>rhyton</em>," is a noun referring to a specific type of ancient Greek drinking vessel. A <em>rhyton</em> was a distinctive container made from ceramic, metal, or even horn, with one end shaped like an animal's head or a similar design, and the other end being the opening from which the liquid was consumed.</p>
     <p>Therefore, the word "<em>argyrorrhyton</em>" (ἀργυρόρρυτον) literally means "a silver <em>rhyton</em>" or "a <em>rhyton</em> made of silver." It refers to a particular type of ancient Greek drinking vessel, specifically a <em>rhyton</em> crafted from silver.</p>
     <p>The word can also be analyzed as a compound adjective of "<em>argyros</em>" (silver) and "<em>rhytos</em>" (flowing or pouring), declined in the neuter gender.</p>
-	<img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/1714729544080.png" alt="img">
+	<img src="https://gitee.com/nekoatama/argyrorrhyton/raw/master/photo/1714729544080.png" alt="img">
  <p>The source material given is a citation from <em>The Liddell, Scott, Jones Ancient Greek Lexicon </em>(LSJ).</p><p>The word <em>argyrorrhytos, -on </em> is attested in Euripides' play "Helen" line 386, describing a location "beside a silver stream" specifically referencing the banks of the river Hebrus.</p>
 
 	<p><a href="https://lsj.gr/wiki/%E1%BC%80%CF%81%CE%B3%CF%85%CF%81%CF%8C%CF%81%CF%81%CF%85%CF%84%CE%BF%CF%82">H. G. Liddell, R. Scott, and H. S. Jones, "ἀργυρόρρυτος," A Greek-English Lexicon.</a></p>
@@ -386,11 +386,11 @@ The clouds seem colourless, and even joy is rather sorrowful there; but fountain
     <h1>Implementing Computer Vision with MobileNetV2 SSD</h1>
 	  <p>In my FYP proposal study, it is envisioned that the computer vision model used will be MobileNetV2 SSD, citing its lightweight capacities suitable for deployment on edge devices. However, preliminary attempts to train a MobileNetV2 SSD inference model using a dataset of 32 images, courtesy of <em>Edgeimpulse.com</em>, is deemed inconvenient to use, due to model hallucinations and other considerations such as <em>Edgeimpulse</em> only provides free CPU training and the wrapper function is written in C++ rather than Python. These restrictions discourages me from using MobileNetV2 SSD as the vision algorithm for the project. </p>
 	  	  <figure>
-    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/fomo1.jpg" alt="img">
+    <img src="https://gitee.com/nekoatama/argyrorrhyton/raw/master/photo/fomo1.jpg" alt="img">
     <figcaption><em>Edgeimpulse.com</em> provided online training capabilities using MobileNetV2 SSD model.</figcaption>
 </figure>
 	  	  <figure>
-    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/fomo2.jpg" alt="img">
+    <img src="https://gitee.com/nekoatama/argyrorrhyton/raw/master/photo/fomo2.jpg" alt="img">
     <figcaption>A trained demonstration model hallucinates extensively and is deemed unsafe to use.</figcaption>
 </figure>
 	  <p><br>Instead, I resorted to using YOLOv8, which is a potent vision algorithm maintained by <em>Ultralytics</em>, and can be trained on GPU locally using standard YOLO datasets on the pyTorch framework.</p>
@@ -399,29 +399,29 @@ The clouds seem colourless, and even joy is rather sorrowful there; but fountain
 	  <h1>Implementing Computer Vision with YOLOv8n</h1>
     <p>To enable real-time perception of houseplants for targeted irrigation, an on-board vision system utilizing the lightweight YOLOv8n object detection model was developed. A dataset of 914 houseplant images from <em>Aspidistra</em> and <em>Epipremnum</em> species was collected by extracting frames from videos recorded by a robotic vehicle in indoor environments of a local university, simulating real-life operating conditions. The dataset was further augmented to 2113 images, with 1893 for training and 190 for validation, using automated labeling on <em>Roboflow.com</em> and preprocessing techniques like resizing and noise introduction. Transfer learning was employed by initializing YOLOv8n with pre-trained weights and the model is trained locally. However, overfitting was observed around the 60th iteration due to limited dataset size and diversity, highlighting the need for further optimization strategies to improve generalization capabilities.</p>
 <figure>
-    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo1.png" alt="img">
+    <img src="https://gitee.com/nekoatama/argyrorrhyton/raw/master/photo/yolo1.png" alt="img">
     <figcaption>Auto-labelling with <em>Roboflow.com</em></figcaption>
 </figure>
 <br>
 
 <figure>
-    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo2.png" alt="img">
+    <img src="https://gitee.com/nekoatama/argyrorrhyton/raw/master/photo/yolo2.png" alt="img">
     <figcaption>Manual adding label instances</figcaption>
 </figure>
 <br>
 
 <figure>
-    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo3.png" alt="img">
+    <img src="https://gitee.com/nekoatama/argyrorrhyton/raw/master/photo/yolo3.png" alt="img">
     <figcaption>Data augmentation and exporting with <em>Roboflow.com</em></figcaption>
 </figure>
 <br>
 
 <figure>
-    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/yolo4.png" alt="img">
+    <img src="https://gitee.com/nekoatama/argyrorrhyton/raw/master/photo/yolo4.png" alt="img">
     <figcaption>Training is done on a GTX1650Ti GPU and monitored with Tensorboard. <br>Early stopping is eventually invoked to prevent overfitting.</figcaption>
 </figure><br>
 	  <figure>
-    <img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/resized_Screenshot%20from%202024-05-07%2019-18-04.png" alt="img">
+    <img src="https://gitee.com/nekoatama/argyrorrhyton/raw/master/photo/resized_Screenshot%20from%202024-05-07%2019-18-04.png" alt="img">
     <figcaption>Real-time object recognition running on robot, on an i5-4670T CPU, at ~60ms per frame (~17FPS)</figcaption>
 </figure><br>
 			 
@@ -438,19 +438,19 @@ The clouds seem colourless, and even joy is rather sorrowful there; but fountain
 	 <h1>Implementing SLAM and Pathfinding with SLAM Toolbox and Nav2 SMAC (A* Algorithm)</h1>
     <p>Precise robot localization and mapping leveraged Google Cartographer SLAM integrated with ROS2, utilizing a planar LIDAR for forward scanning. SLAM maps were visualized in Rviz2 along with the robot's trajectory for monitoring performance. The vision system's polar houseplant coordinates were transformed to Cartesian positions on the SLAM-derived maps. These global houseplant locations served as waypoints for ROS2 Nav2's SMAC planner to compute obstacle-free navigation routes across the field, dynamically adjusting with new map data, enabling autonomous precision irrigation of detected plants.</p>
 	  <figure>
-    <br><img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/slam1.png" alt="img">
+    <br><img src="https://gitee.com/nekoatama/argyrorrhyton/raw/master/photo/slam1.png" alt="img">
     <figcaption>LIDAR visualization in Rviz2</figcaption>
 </figure>
 		    <figure>
-    <br><img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/resized_slam3.jpg" alt="img">
+    <br><img src="https://gitee.com/nekoatama/argyrorrhyton/raw/master/photo/resized_slam3.jpg" alt="img">
     <figcaption>Multiple driver issues, configurations and incompatibility errors are resolved to make SLAM working as intended</figcaption>
 </figure>
 		      <figure>
-    <br><img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/resized_Screenshot%20from%202024-05-07%2018-19-42.png" alt="img">
+    <br><img src="https://gitee.com/nekoatama/argyrorrhyton/raw/master/photo/resized_Screenshot%20from%202024-05-07%2018-19-42.png" alt="img">
     <figcaption>Transform node topology and SLAM</figcaption>
 </figure>
 		    <figure>
-    <br><img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/resized_Screenshot%20from%202024-05-05%2016-08-03.png" alt="img">
+    <br><img src="https://gitee.com/nekoatama/argyrorrhyton/raw/master/photo/resized_Screenshot%20from%202024-05-05%2016-08-03.png" alt="img">
     <figcaption>Costmap generation using Nav2</figcaption>
 </figure>
 </section>
@@ -493,11 +493,11 @@ From England to Van Diemen.
 		 <em>-- Amphion</em>, Alfred Tennyson     </blockquote><br><br>
     <p>This is the content of Section 3.</p>
 			    <figure>
-    <br><img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/resized_phyt1.jpg" alt="img">
+    <br><img src="https://gitee.com/nekoatama/argyrorrhyton/raw/master/photo/resized_phyt1.jpg" alt="img">
     <figcaption>Phytognomon GUI is integrated with Phytomantis in constructing a database of irrigated plants.</figcaption>
 </figure>
 				    <figure>
-    <br><img src="https://raw.githubusercontent.com/Iteinos/Argyrorrhyton/main/photo/resized_phyt2.jpg" alt="img">
+    <br><img src="https://gitee.com/nekoatama/argyrorrhyton/raw/master/photo/resized_phyt2.jpg" alt="img">
     <figcaption>The RFID reader is connected to Argyrorrhyton mainframe via a RS232-USB converter.</figcaption>
 </figure>
 </section>
